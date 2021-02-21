@@ -93,7 +93,7 @@ class MPU6886:
         self.i2c = i2c
         self.address = address
 
-        if 0x19 != self.whoami:
+        #if 0x19 != self.whoami:
             raise RuntimeError("MPU6886 not found in I2C bus.")
 
         self._register_char(_PWR_MGMT_1, 0b10000000) # reset
